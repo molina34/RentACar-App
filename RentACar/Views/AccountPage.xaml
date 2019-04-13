@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RentACar.Views.AccountPage"
+             Title="{Binding Title}">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Image HorizontalOptions="CenterAndExpand" Source="logo.png"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="20" Padding="30">
+            <Label Text="Account" TextColor="Blue" FontSize="20" />
+            
+           <StackLayout>
+                <Label Text="FirstName" FontSize="14"/>
+                <Entry/>
+            </StackLayout>
+            
+           <StackLayout>
+                <Label Text="LastName" FontSize="14"/>
+                <Entry/>
+            </StackLayout>
+            
+           <StackLayout>
+                <Label Text="Email" FontSize="14"/>
+                <Entry Keyboard="Email"/>
+            </StackLayout>
+            
+            <Button Text="Update" BackgroundColor="Blue" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

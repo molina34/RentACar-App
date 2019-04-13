@@ -16,10 +16,9 @@
             <StackLayout Spacing="4">
                 <Button Text="Available Cars" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
                 <Button Text="Orders" Command="{Binding ClickOrdersCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
-                <Button Text="Account" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
-                <Button Text="Settings" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
-                <Button Text="Contact" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
-                <Button Text="Logout" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16" />
+                <Button Text="Account" Command="{Binding ClickAccountCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Contact" Command="{Binding ClickContactCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Logout" Command="{Binding ClickLogoutCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16" />
             </StackLayout>
         </ScrollView>
     </StackLayout>

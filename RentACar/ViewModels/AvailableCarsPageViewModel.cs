@@ -48,7 +48,7 @@ namespace RentACar.ViewModels
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
-            string url = "http://www.molina34.com/maratona_xamarin/cars.json";
+            string url = "https://raw.githubusercontent.com/molina34/RentACar/master/API/cars.json";
             var client = new HttpClient();
 
             Task.Factory.StartNew(async () =>

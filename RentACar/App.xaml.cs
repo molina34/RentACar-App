@@ -31,6 +31,8 @@ namespace RentACar
             containerRegistry.RegisterForNavigation<AvailableCarsPage>();
             containerRegistry.RegisterForNavigation<CarInfoPage>();
             containerRegistry.RegisterForNavigation<OrdersPage>();
+            containerRegistry.RegisterForNavigation<AccountPage>();
+            containerRegistry.RegisterForNavigation<ContactPage>();
         }
 
     }

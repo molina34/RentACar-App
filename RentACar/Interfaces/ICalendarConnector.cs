@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RentACar.Control
+namespace RentACar.Interfaces
 {
     public interface ICalendarConnector
     {

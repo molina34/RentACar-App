@@ -26,10 +26,9 @@ namespace RentACar.ViewModels
 
             ClickAvailableCarsCommand = new DelegateCommand(async () => await ClickedAvailableCarsCommand());
             ClickOrdersCommand = new DelegateCommand(async () => await ClickedOrdersCommand());
-            //ClickAccountCommand = new DelegateCommand(async () => await ClickedAccountCommand());
-            //ClickSettingsCommand = new DelegateCommand(async () => await ClickedSettingsCommand());
-            //ClickContactCommand = new DelegateCommand(async () => await ClickedContactCommand());
-            //ClickLogoutCommand = new DelegateCommand(async () => await ClickedLogoutCommand());
+            ClickAccountCommand = new DelegateCommand(async () => await ClickedAccountCommand());
+            ClickContactCommand = new DelegateCommand(async () => await ClickedContactCommand());
+            ClickLogoutCommand = new DelegateCommand(async () => await ClickedLogoutCommand());
         }
 
         private async Task ClickedAvailableCarsCommand()
@@ -40,6 +39,21 @@ namespace RentACar.ViewModels
         private async Task ClickedOrdersCommand()
         {
             await NavigationService.NavigateAsync("./" + nameof(OrdersPage));
+        }
+
+        private async Task ClickedAccountCommand()
+        {
+            await NavigationService.NavigateAsync("./" + nameof(AccountPage));
+        }
+
+        private async Task ClickedContactCommand()
+        {
+            await NavigationService.NavigateAsync("./" + nameof(ContactPage));
+        }
+
+        private async Task ClickedLogoutCommand()
+        {
+            await NavigationService.NavigateAsync("/" + nameof(LoginPage));
         }
     }
 }

@@ -13,7 +13,7 @@ using Android.Views;
 using Android.Widget;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
-using RentACar.Control;
+using RentACar.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(RentACar.Droid.CalendarConnector))]

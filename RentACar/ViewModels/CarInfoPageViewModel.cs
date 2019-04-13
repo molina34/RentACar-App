@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Prism.Commands;
 using Prism.Navigation;
 using RentACar.Entities;
+using RentACar.Interfaces;
 using RentACar.Models;
 using RentACar.Views;
 using SQLite;
@@ -57,7 +58,7 @@ namespace RentACar.ViewModels
 
         private async void ExecuteClickRent()
         {
-            DependencyService.Get<Control.ICalendarConnector>().AddAppointment(SelectedDayInic.AddHours(10), SelectedDayFinal.AddHours(12), "Rent: " + CarSelected.Name, "Rent a car store", "Rent A Car", false);
+            DependencyService.Get<ICalendarConnector>().AddAppointment(SelectedDayInic.AddHours(10), SelectedDayFinal.AddHours(12), "Rent: " + CarSelected.Name, "Rent a car store", "Rent A Car", false);
 
             SQLiteConnection conn = Database.Database.GetConnection();
             OrderEntity NewOrder = new OrderEntity
