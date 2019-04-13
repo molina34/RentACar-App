@@ -1,0 +1,58 @@
+using System;
+using CoreGraphics;
+using RentACar.iOS.CustomRenderers;
+using UIKit;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
+[assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageCustomRenderer))]
+namespace RentACar.iOS.CustomRenderers
+{
+    class ContentPageCustomRenderer : PageRenderer
+    {
+
+        protected override void OnElementChanged(VisualElementChangedEventArgs e)
+        {
+            base.OnElementChanged(e);
+
+            if (e.OldElement != null || Element == null)
+            {
+                return;
+            }
+
+            ContentPage page = (ContentPage)Element;
+
+            // define SafeArea
+            page.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+
+            if (!string.IsNullOrEmpty(page.BackgroundImage))
+            {
+                UIImage ImageBackground = UIImage.FromFile(page.BackgroundImage);
+                page.BackgroundImage = null;
+
+
+                CGRect scaledImageRect = CGRect.Empty;
+
+                double aspectWidth = this.View.Frame.Size.Width / ImageBackground.Size.Width;
+                double aspectHeight = this.View.Frame.Size.Height / ImageBackground.Size.Height;
+                double aspectRatio = Math.Max(aspectWidth, aspectHeight);
+
+                scaledImageRect.Size = new CGSize(ImageBackground.Size.Width * aspectRatio, ImageBackground.Size.Height * aspectRatio);
+                scaledImageRect.X = (this.View.Frame.Size.Width - scaledImageRect.Size.Width) / 2.0f;
+                scaledImageRect.Y = (this.View.Frame.Size.Height - scaledImageRect.Size.Height) / 2.0f;
+
+                UIGraphics.BeginImageContextWithOptions(this.View.Frame.Size, false, 0);
+                ImageBackground.Draw(scaledImageRect);
+
+                UIImage scaledImage = UIGraphics.GetImageFromCurrentImageContext();
+                UIGraphics.EndImageContext();
+
+                this.View.BackgroundColor = UIColor.FromPatternImage(scaledImage);
+            }
+
+
+        }
+
+    }
+}
