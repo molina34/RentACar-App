@@ -7,7 +7,7 @@
         "Year": "2018",
         "Color" : "Green",
         "Price" : "2300,00",
-        "Photo" : "http://www.molina34.com/maratona_xamarin/car_23.jpg"
+        "Photo" : "https://raw.githubusercontent.com/molina34/RentACar/master/API/car_23.jpg"
     },
     { 
         "id" : 24,
@@ -17,7 +17,7 @@
         "Year": "2012",
         "Color" : "Red",
         "Price" : "1400,00",
-        "Photo" : "http://www.molina34.com/maratona_xamarin/car_24.jpg"
+        "Photo" : "https://raw.githubusercontent.com/molina34/RentACar/master/API/car_24.jpg"
     },
     { 
         "id" : 25,
@@ -27,7 +27,7 @@
         "Year": "2018",
         "Color" : "Red",
         "Price" : "2900,00",
-        "Photo" : "http://www.molina34.com/maratona_xamarin/car_25.jpg"
+        "Photo" : "https://raw.githubusercontent.com/molina34/RentACar/master/API/car_25.jpg"
     },
     { 
         "id" : 26,
@@ -37,7 +37,7 @@
         "Year": "2015",
         "Color" : "Red",
         "Price" : "2100,00",
-        "Photo" : "http://www.molina34.com/maratona_xamarin/car_26.jpg"
+        "Photo" : "https://raw.githubusercontent.com/molina34/RentACar/master/API/car_26.jpg"
     },
     { 
         "id" : 27,
@@ -47,6 +47,6 @@
         "Year": "2016",
         "Color" : "Silver",
         "Price" : "1840,00",
-        "Photo" : "http://www.molina34.com/maratona_xamarin/car_27.jpg"
+        "Photo" : "https://raw.githubusercontent.com/molina34/RentACar/master/API/car_27.jpg"
     }
 ]
