@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RentACar.Views.AvailableCarsPage"
+             xmlns:behaviors="clr-namespace:RentACar.Behaviors;assembly=RentACar"
+             Title="{Binding Title}">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Image HorizontalOptions="CenterAndExpand" Source="logo.png"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+        <Label Text="Available Cars" Margin="30" TextColor="Blue" FontSize="20" />
+            
+            <ListView ItemsSource="{Binding CarsList}" SelectedItem="{Binding CarSelected, Mode=TwoWay}" HasUnevenRows="True">
+                
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ClickAvailableCarCommand}" />
+                </ListView.Behaviors>
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <StackLayout>
+                                    <Image Source="{Binding Photo}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="60" WidthRequest="100" Aspect="AspectFill"/>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label FontSize="14">
+                                        <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="$ "/>
+                                            <Span Text="{Binding Price}"/>
+                                            <Span Text=" p/day"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RentACar.Views.CarInfoPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Grid>
+                        <Image Source="{Binding CarSelected.Photo}" Aspect="AspectFill" HeightRequest="300"/>
+                        <Label Text="{Binding CarSelected.Name}" Margin="20" TextColor="White"/>
+                    </Grid>
+                    <StackLayout Padding="20" Spacing="40">
+                        <StackLayout>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Brand: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding CarSelected.Brand}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Model: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding CarSelected.Model}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Year: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding CarSelected.Year}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Color: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding CarSelected.Color}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Price: " FontAttributes="Bold"/>
+                                        <Span Text="$"/>
+                                        <Span Text="{Binding CarSelected.Price}"/>
+                                        <Span Text=" p/day"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <StackLayout>
+                                <Label Text="Start Date" FontAttributes="Bold"/>
+                                <DatePicker Date="{Binding SelectedDayInic}" MinimumDate="{Binding MinDate}" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="End Date" FontAttributes="Bold"/>
+                                <DatePicker Date="{Binding SelectedDayFinal}" MinimumDate="{Binding MinDate}"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Button Text="Rent now" TextColor="White" Command="{Binding ConfirmCommand}"
+                            WidthRequest="200" HeightRequest="40" HorizontalOptions="Center"
+                            BackgroundColor="Red" CornerRadius="20"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

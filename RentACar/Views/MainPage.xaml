@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RentACar.Views"
+             x:Class="RentACar.Views.MainPage"
+             Title="{Binding Title}"
+             BackgroundImage="bg">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Image HorizontalOptions="CenterAndExpand" Source="logo.png"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+        <Label Text="Hi Danilo!" TextColor="White" Margin="30" FontSize="20" />
+        <ScrollView>
+            <StackLayout Spacing="4">
+                <Button Text="Available Cars" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Orders" Command="{Binding ClickOrdersCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Account" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Settings" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Contact" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16"/>
+                <Button Text="Logout" Command="{Binding ClickAvailableCarsCommand}" CornerRadius="0" BackgroundColor="#CC000000" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="16" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RentACar.Views"
+             x:Class="RentACar.Views.LoginPage"
+             Title="{Binding Title}"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="bg">
+    
+    <StackLayout VerticalOptions="Center" Spacing="60">
+        <Image
+            Source="logo" WidthRequest="250"
+            Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+        
+        
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Login" TextColor="White"
+                       HorizontalTextAlignment="Start" HorizontalOptions="Center" WidthRequest="300"/>
+
+                <Entry Text="{Binding Login}" TextColor="Black"
+                    HorizontalOptions="Center" WidthRequest="300"/>
+            </StackLayout>
+            
+            <StackLayout>
+                <Label Text="Password" TextColor="White"
+                       HorizontalTextAlignment="Start" HorizontalOptions="Center" WidthRequest="300"/>
+
+                <Entry Text="{Binding Password}" TextColor="Black" IsPassword="true"
+                    HorizontalOptions="Center" WidthRequest="300"/>
+            </StackLayout>
+        </StackLayout>
+        
+        <Button Text="Login" TextColor="White" Command="{Binding ClickLoginCommand}"
+            WidthRequest="200" HeightRequest="40" HorizontalOptions="Center"
+            BackgroundColor="#1853B8" CornerRadius="20"/>
+        
+    </StackLayout>
+    
+</ContentPage>
