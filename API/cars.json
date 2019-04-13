@@ -1,0 +1,52 @@
+[
+    { 
+        "id" : 23,
+        "Name" : "Lamborguini Huracán",
+        "Brand" : "Lamborguini",
+        "Model" : "Huracán",
+        "Year": "2018",
+        "Color" : "Green",
+        "Price" : "2300,00",
+        "Photo" : "http://www.molina34.com/maratona_xamarin/car_23.jpg"
+    },
+    { 
+        "id" : 24,
+        "Name" : "Ferrari 488 GTB",
+        "Brand" : "Ferrari",
+        "Model" : "488 GTB 3.9l V8 Coupe",
+        "Year": "2012",
+        "Color" : "Red",
+        "Price" : "1400,00",
+        "Photo" : "http://www.molina34.com/maratona_xamarin/car_24.jpg"
+    },
+    { 
+        "id" : 25,
+        "Name" : "Maserati",
+        "Brand" : "Maserati",
+        "Model" : "GranTurismo Sport Black",
+        "Year": "2018",
+        "Color" : "Red",
+        "Price" : "2900,00",
+        "Photo" : "http://www.molina34.com/maratona_xamarin/car_25.jpg"
+    },
+    { 
+        "id" : 26,
+        "Name" : "Ford Mustang GT Street",
+        "Brand" : "Ford",
+        "Model" : "Mustang GT Street",
+        "Year": "2015",
+        "Color" : "Red",
+        "Price" : "2100,00",
+        "Photo" : "http://www.molina34.com/maratona_xamarin/car_26.jpg"
+    },
+    { 
+        "id" : 27,
+        "Name" : "Corvette Stingray Convertible",
+        "Brand" : "Chevrolet",
+        "Model" : "Stingray Convertible",
+        "Year": "2016",
+        "Color" : "Silver",
+        "Price" : "1840,00",
+        "Photo" : "http://www.molina34.com/maratona_xamarin/car_27.jpg"
+    }
+]
